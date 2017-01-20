@@ -1,5 +1,9 @@
 package com.github.pwdd.tttWebApp
 
-class Main {
+import com.github.pwdd.tttWebApp.serverEngine.SRunner
 
+class Main {
+  def main(args: Array[String]): Unit = {
+    SRunner.start(args)
+  }
 }
