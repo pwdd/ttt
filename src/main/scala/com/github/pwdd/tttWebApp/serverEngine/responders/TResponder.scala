@@ -3,7 +3,10 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 import java.io.{IOException, InputStream}
 import java.nio.file.{Files, Path, Paths}
 
+import com.github.pwdd.tttWebApp.serverEngine.protocols.ProtocolSettings
+
 trait TResponder extends com.github.pwdd.HTTPServer.responders.IResponder {
+  val protocolSettings = ProtocolSettings
   val CRLF: String = "\r\n"
 
   def canRespond(fullURI: String): Boolean
@@ -12,9 +15,4 @@ trait TResponder extends com.github.pwdd.HTTPServer.responders.IResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream
-
-  def size(fullURI: String): Int = {
-    val path: Path = Paths.get(fullURI)
-    Files.size(path).toInt
-  }
 }

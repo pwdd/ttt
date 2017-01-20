@@ -1,4 +1,4 @@
-package com.github.pwdd.tttWebApp.responders
+package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.nio.file.Paths
 import scala.io.Source.{fromFile, fromInputStream}

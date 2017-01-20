@@ -2,6 +2,11 @@ package com.github.pwdd.tttWebApp.serverEngine.protocols
 
 import java.util
 
+import com.github.pwdd.tttWebApp.serverEngine.responders.{NewGameResponder, PlayResponder}
+
 object ProtocolFactory extends TProtocolFactory {
-  override def createProtocol(rootDirectory: String, request: util.HashMap[String, String]): TProtocol = ???
+  def createProtocol(rootDirectory: String, request: util.HashMap[String, String]): AbsProtocol = {
+    if (request.get("Method").toUpperCase == "GET") GETProtocol(rootDirectory, request, Array(NewGameResponder))
+    else POSTProtocol(rootDirectory, request, Array(new PlayResponder(request.get("Body"))))
+  }
 }
