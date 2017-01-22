@@ -2,7 +2,7 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 import java.io._
 import java.nio.file.Paths
 
-object NewGameResponder extends TResponder {
+case object NewGameResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
     val path: String = Paths.get(System.getProperty("user.dir"), "public").toString.toLowerCase
     fullURI.toLowerCase == path
@@ -20,6 +20,6 @@ object NewGameResponder extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream =  {
-    new FileInputStream(fullURI + "/base.html")
+    GameAdapter.newGame("public/base.html")
   }
 }

@@ -1,11 +1,14 @@
 package com.github.pwdd.tttWebApp.serverEngine.protocols
+
 import java.io.{ByteArrayInputStream, InputStream}
 import java.util
 
 import com.github.pwdd.HTTPServer.responders.IResponder
 
-case class GETProtocol(rootDirectoryOverride: String, requestOverride: util.HashMap[String, String], respondersOverride: Array[IResponder])
-  extends AbsProtocol(rootDirectoryOverride, requestOverride, respondersOverride) {
+case class GETProtocol(rootDir: String,
+                       requested: util.HashMap[String, String],
+                       respondersList: Array[IResponder])
+  extends AbsProtocol(rootDir, requested, respondersList) {
 
   def errorMessage(date: String): InputStream = {
     val CRLF = protocolSettings.CRLF

@@ -2,7 +2,7 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
-class PlayResponder(val requestBody: String) extends TResponder {
+case class PlayResponder(val requestBody: String) extends TResponder {
 
   def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches("/play/?")
 

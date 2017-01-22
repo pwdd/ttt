@@ -7,6 +7,6 @@ import com.github.pwdd.tttWebApp.serverEngine.responders.{NewGameResponder, Play
 object ProtocolFactory extends TProtocolFactory {
   def createProtocol(rootDirectory: String, request: util.HashMap[String, String]): AbsProtocol = {
     if (request.get("Method").toUpperCase == "GET") GETProtocol(rootDirectory, request, Array(NewGameResponder))
-    else POSTProtocol(rootDirectory, request, Array(new PlayResponder(request.get("Body"))))
+    else POSTProtocol(rootDirectory, request, Array(PlayResponder(request.get("Body"))))
   }
 }

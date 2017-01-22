@@ -2,16 +2,21 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{FileInputStream, InputStream}
 
-import com.github.pwdd.ttt.{Board, Validation}
+import com.github.pwdd.ttt.{Board, EvalGame, Validation}
 import com.github.pwdd.ttt.player.computer.HardComputer
 import com.github.pwdd.tttWebApp.tttEngine.{WebMessenger, WebView}
 
 object GameAdapter {
   private val validation = Validation
   private val boardRepresentation = Map('_ -> "-", 'x -> "x", 'o -> "o")
-  private val filePath = "public/play.html"
   private val firstPlayer = Board.firstPlayer
-  private val secondPlayer = Board.secondPlayer
+  private val boardSize = 9
+  private val computerPlayer = HardComputer(Board.secondPlayer)
+
+  def newGame(filePath: String): InputStream = {
+    val newBoard = Board.newBoard(boardSize)
+    createFile(newBoard, "public/base.html")
+  }
 
   def boardStateToGameBoard(boardState: String): List[Symbol] = {
     val trimmed = boardState.replaceAll("\\s+", "")
@@ -20,12 +25,12 @@ object GameAdapter {
     if (isValidBoardState(convert)) {
       convert
     } else {
-      Board.newBoard(9)
+      Board.newBoard(boardSize)
     }
   }
 
   def isValidBoardState(boardList: List[Symbol]): Boolean = {
-    boardList.count(_ != null) == 9
+    boardList.count(_ != null) == boardSize
   }
 
   private def getKeyFromValue(map: Map[Symbol, String], value: String): Symbol = {
@@ -36,16 +41,16 @@ object GameAdapter {
     result
   }
 
-  def play(formMap: Map[String, String]): InputStream = {
+  def play(formMap: Map[String, String], filePath: String = "public/play.html"): InputStream = {
     val gameBoard = boardStateToGameBoard(formMap("board"))
     val nextBoard = createNextBoard(gameBoard, formMap)
-    createFile(nextBoard)
+    createFile(nextBoard, filePath)
   }
 
   def createNextBoard(board: List[Symbol], formMap: Map[String, String]): List[Symbol] = {
     def userMove = formMap("input").toInt
 
-    if (Board.isFull(board)) board
+    if (EvalGame.gameOver(board)) board
     else {
       val userInput = userMove
 
@@ -59,13 +64,13 @@ object GameAdapter {
   }
 
   private def computerMove(board: List[Symbol]): List[Symbol] = {
-    val computerMove = HardComputer(secondPlayer).getSpot(board)
-    Board.move(board, secondPlayer, computerMove)
+    val computerMove = computerPlayer.getSpot(board)
+    Board.move(board, computerPlayer.marker, computerMove)
   }
 
-  private def createFile(board: List[Symbol]) = {
+  private def createFile(board: List[Symbol], filePath: String) = {
     val message = WebMessenger.strBoard(board)
-    new WebView().printMessage(message)
+    new WebView(filePath).printMessage(message)
     new FileInputStream(filePath)
   }
 }

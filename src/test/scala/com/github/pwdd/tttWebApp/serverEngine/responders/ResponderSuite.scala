@@ -2,7 +2,6 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.nio.file.Paths
 
-import com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponder
 import org.scalatest.FunSuite
 
 class ResponderSuite extends FunSuite {

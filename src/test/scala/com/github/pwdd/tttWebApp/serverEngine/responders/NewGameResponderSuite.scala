@@ -2,7 +2,6 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.nio.file.Paths
 import scala.io.Source.{fromFile, fromInputStream}
-import com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponder
 import org.scalatest.FunSuite
 
 class NewGameResponderSuite extends FunSuite {
@@ -18,7 +17,7 @@ class NewGameResponderSuite extends FunSuite {
 
   test("body: returns the content of public/base.html") {
     val source = fromFile("public/base.html")
-    val lines = try source.mkString finally source.close()
+    val lines = try source.mkString.replaceAll("\\n", "") finally source.close()
     val body = fromInputStream(NewGameResponder.body(root)).mkString
 
     assert(lines == body)

@@ -1,7 +1,6 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{IOException, InputStream}
-import java.nio.file.{Files, Path, Paths}
 
 import com.github.pwdd.tttWebApp.serverEngine.protocols.ProtocolSettings
 

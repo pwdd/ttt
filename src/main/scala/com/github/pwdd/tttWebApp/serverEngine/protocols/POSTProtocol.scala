@@ -5,10 +5,10 @@ import java.util
 
 import com.github.pwdd.HTTPServer.responders.IResponder
 
-case class POSTProtocol(rootDirectoryOverride: String,
-                        requestOverride: util.HashMap[String, String],
-                        respondersOverride: Array[IResponder])
-  extends AbsProtocol(rootDirectoryOverride, requestOverride, respondersOverride) {
+case class POSTProtocol(rootDir: String,
+                        requested: util.HashMap[String, String],
+                        respondersList: Array[IResponder])
+  extends AbsProtocol(rootDir, requested, respondersList) {
 
   def errorMessage(date: String): InputStream = {
     val CRLF = protocolSettings.CRLF
