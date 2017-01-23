@@ -1,11 +1,10 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
-import java.io._
-import java.nio.file.Paths
 
-case object NewGameResponder extends TResponder {
+import java.io.{ByteArrayInputStream, IOException, InputStream}
+
+object NewGameJSONResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
-    val path: String = Paths.get(System.getProperty("user.dir"), "public").toString.toLowerCase
-    fullURI.toLowerCase == path
+    fullURI.toLowerCase.matches("/new.json/?")
   }
 
   def header(fullURI: String, date: String): InputStream = {
@@ -14,12 +13,12 @@ case object NewGameResponder extends TResponder {
     new ByteArrayInputStream(
       (protocolSettings.version + " " + protocolSettings.statusCodes.get("200") + CRLF +
         "Date: " + date + CRLF +
-        "Content-Type: text/html" + CRLF +
+        "Content-Type: application/json" + CRLF +
         CRLF).getBytes)
   }
 
   @throws[IOException]
-  def body(fullURI: String): InputStream =  {
-    HTMLResponseBuilder.createResponse(GameAdapter.newGame, "public/base.html")
+  def body(fullURI: String): InputStream = {
+    JSONResponseBuilder.createResponse(GameAdapter.newGame, "")
   }
 }
