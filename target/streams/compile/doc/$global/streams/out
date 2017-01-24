@@ -1,0 +1,32 @@
+[0m[[0minfo[0m] [0mMain Scala API documentation to /Users/aina/8thlight/tttWebApp/target/scala-2.12/api...[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.13:component from component compiler for Scala 2.12.1[0m
+[0m[[0mdebug[0m] [0mCalling Scaladoc with arguments:[0m
+[0m[[0mdebug[0m] [0m	-d[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/target/scala-2.12/api[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/classes:/Users/aina/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar:/Users/aina/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.1.jar:/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1.jar:/Users/aina/.m2/repository/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.jar:/Users/aina/.ivy2/cache/com.typesafe.play/play-json_2.12/jars/play-json_2.12-2.6.0-M1.jar:/Users/aina/.ivy2/cache/com.typesafe.play/play-functional_2.12/jars/play-functional_2.12-2.6.0-M1.jar:/Users/aina/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.8.5.jar:/Users/aina/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.8.5.jar:/Users/aina/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.8.5.jar:/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.8.5.jar:/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.8.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/Main.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/SRunner.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/ServerArguments.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/TServerArguments.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/AbsProtocol.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/GETProtocol.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/POSTProtocol.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/ProtocolFactory.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/ProtocolSettings.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/TProtocolFactory.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/protocols/TProtocolSettings.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/GameAdapter.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/HTMLResponseBuilder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/JSONResponseBuilder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/NewGameJSONResponder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/NewGameResponder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/PlayJSONResponder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/PlayResponder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/ResponseBuilder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/serverEngine/responders/TResponder.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/tttEngine/WebMessenger.scala[0m
+[0m[[0mdebug[0m] [0m	/Users/aina/8thlight/tttWebApp/src/main/scala/com/github/pwdd/tttWebApp/tttEngine/WebView.scala[0m
+[0m[[0minfo[0m] [0mMain Scala API documentation successful.[0m

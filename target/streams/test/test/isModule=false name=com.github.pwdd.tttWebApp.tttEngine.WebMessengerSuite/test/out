@@ -1,0 +1,4 @@
+[0m[[0minfo[0m] [0m[32mWebMessengerSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- strBoard: prints a series an html with a form tag for each board spot[0m[0m
+[0m[[0minfo[0m] [0m[32m- strBoard: adds a break every 3 form tags[0m[0m
+[0m[[0minfo[0m] [0m[32m- strBoard: has a field that holds board representation[0m[0m

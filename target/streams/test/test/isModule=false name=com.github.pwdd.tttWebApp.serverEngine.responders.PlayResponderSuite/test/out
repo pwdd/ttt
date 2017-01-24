@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mPlayResponderSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- canRespond: is false for any other path[0m[0m
+[0m[[0minfo[0m] [0m[32m- canRespond: is false for invalid request[0m[0m
+[0m[[0minfo[0m] [0m[32m- isValidRequest: is false for empty List[0m[0m
+[0m[[0minfo[0m] [0m[32m- isValidRequest: is false for List that holds anything other than right markers[0m[0m
+[0m[[0minfo[0m] [0m[32m- isValidRequest: is false for invalid spot[0m[0m
