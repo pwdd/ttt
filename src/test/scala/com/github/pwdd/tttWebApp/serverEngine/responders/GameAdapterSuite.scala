@@ -1,6 +1,6 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import com.github.pwdd.ttt.Board
+import com.github.pwdd.tttcore.Board
 import org.scalatest.FunSuite
 
 class GameAdapterSuite extends FunSuite {

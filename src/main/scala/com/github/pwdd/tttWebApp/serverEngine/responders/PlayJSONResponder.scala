@@ -1,7 +1,7 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
-import com.github.pwdd.ttt.Board
+import com.github.pwdd.tttcore.Board
 import play.api.libs.json.Json
 
 case class PlayJSONResponder(requestBody: String) extends TResponder {

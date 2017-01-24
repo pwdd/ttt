@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20170124101417"/>
+		date="20170124165349"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-json_2.12">
 			<revision name="2.6.0-M1" status="release" pubdate="20161205234656" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
@@ -107,23 +107,25 @@
 			</revision>
 		</module>
 		<module organisation="com.github.pwdd.HTTPServer" name="HTTPServer">
-			<revision name="0.1" status="release" pubdate="20170119162732" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
-				<metadata-artifact status="no" details="" size="2960" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.1.xml" searched="false" origin-is-local="true" origin-location="/Users/aina/.m2/repository/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.pom"/>
+			<revision name="0.1" status="release" pubdate="20170124124707" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="MIT License" url="https://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3275" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.pom"/>
 				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="0.1" rev-constraint-default="0.1" rev-constraint-dynamic="0.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="HTTPServer" type="jar" ext="jar" status="no" details="" size="16037" time="0" location="/Users/aina/.m2/repository/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.jar">
-						<origin-location is-local="true" location="/Users/aina/.m2/repository/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.jar"/>
+					<artifact name="HTTPServer" type="jar" ext="jar" status="no" details="" size="16130" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/jars/HTTPServer-0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="default" name="tttcore_2.12">
-			<revision name="0.0.1" status="release" pubdate="20161229111940" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
-				<metadata-artifact status="no" details="" size="2792" time="0" location="/Users/aina/.ivy2/cache/default/tttcore_2.12/ivy-0.0.1.xml" searched="false" origin-is-local="true" origin-location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1.pom"/>
-				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="0.0.1" rev-constraint-default="0.0.1" rev-constraint-dynamic="0.0.1" callerrev="1.0"/>
+		<module organisation="com.github.pwdd" name="tttcore_2.12">
+			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="Sonatype OSS Snapshots" artresolver="Sonatype OSS Snapshots" homepage="https://github.com/pwdd/ttt" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="successful" details="" size="1756" time="183" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml" searched="true" original-local-location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml.original" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.pom"/>
+				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="0.0.1.1" rev-constraint-default="0.0.1.1" rev-constraint-dynamic="0.0.1.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="tttcore_2.12" type="jar" ext="jar" status="no" details="" size="29275" time="0" location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1.jar">
-						<origin-location is-local="true" location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1.jar"/>
+					<artifact name="tttcore_2.12" type="jar" ext="jar" status="successful" details="" size="29512" time="216" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/jars/tttcore_2.12-0.0.1.1.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -146,7 +148,7 @@
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2967" time="0" location="/Users/aina/.ivy2/cache/org.scalactic/scalactic_2.12/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.1/scalactic_2.12-3.0.1.pom"/>
 				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
-				<caller organisation="default" name="tttcore_2.12" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1"/>
+				<caller organisation="com.github.pwdd" name="tttcore_2.12" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1.1"/>
 				<artifacts>
 					<artifact name="scalactic_2.12" type="bundle" ext="jar" status="no" details="" size="705564" time="0" location="/Users/aina/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.1/scalactic_2.12-3.0.1.jar"/>
@@ -156,7 +158,7 @@
 			<revision name="3.0.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, default, default(compile)" position="-1">
 				<evicted-by rev="3.0.1"/>
 				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
-				<caller organisation="default" name="tttcore_2.12" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1"/>
+				<caller organisation="com.github.pwdd" name="tttcore_2.12" conf="default, compile, runtime, master" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.0.1.1"/>
 				<artifacts>
 				</artifacts>
 			</revision>
@@ -166,10 +168,10 @@
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/Users/aina/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.pom"/>
 				<caller organisation="default" name="tttwebapp_2.12" conf="compile" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="1.0"/>
+				<caller organisation="com.github.pwdd" name="tttcore_2.12" conf="default, compile, runtime, master" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="0.0.1.1"/>
 				<caller organisation="com.typesafe.play" name="play-functional_2.12" conf="compile, runtime" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="2.6.0-M1"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="2.6.0-M1"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="2.12.1"/>
-				<caller organisation="default" name="tttcore_2.12" conf="default, compile, runtime, master" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="0.0.1"/>
 				<caller organisation="org.scalactic" name="scalactic_2.12" conf="default, compile, runtime, master" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="3.0.1"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272325" time="0" location="/Users/aina/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar">

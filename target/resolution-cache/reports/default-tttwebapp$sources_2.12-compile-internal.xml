@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20170124101417"/>
+		date="20170124165356"/>
 	<dependencies>
 		<module organisation="org.scalactic" name="scalactic_2.12">
 			<revision name="3.0.1" status="release" pubdate="20161109235016" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="10">
@@ -33,25 +33,26 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="com.github.pwdd" name="tttcore_2.12">
+			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pwdd/ttt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+				<license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="2916" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.pom"/>
+				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile-internal, compile, provided, optional" rev="0.0.1.1" rev-constraint-default="0.0.1.1" rev-constraint-dynamic="0.0.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="tttcore_2.12" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="5182" time="248" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/srcs/tttcore_2.12-0.0.1.1-sources.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
-			<revision name="2.8.5" status="release" pubdate="20161114114848" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+			<revision name="2.8.5" status="release" pubdate="20161114114848" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="20763" time="0" location="/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile-internal, compile, provided, optional" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="1.0"/>
 				<artifacts>
 					<artifact name="jackson-datatype-jsr310" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="62124" time="0" location="/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/srcs/jackson-datatype-jsr310-2.8.5-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="default" name="tttcore_2.12">
-			<revision name="0.0.1" status="release" pubdate="20161229111940" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
-				<metadata-artifact status="no" details="" size="2792" time="0" location="/Users/aina/.ivy2/cache/default/tttcore_2.12/ivy-0.0.1.xml" searched="false" origin-is-local="true" origin-location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1.pom"/>
-				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile-internal, compile, provided, optional" rev="0.0.1" rev-constraint-default="0.0.1" rev-constraint-dynamic="0.0.1" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="tttcore_2.12" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5076" time="0" location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1-sources.jar">
-						<origin-location is-local="true" location="/Users/aina/.m2/repository/default/tttcore_2.12/0.0.1/tttcore_2.12-0.0.1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

@@ -1,7 +1,7 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import com.github.pwdd.ttt.{Board, EvalGame, Validation}
-import com.github.pwdd.ttt.player.computer.HardComputer
+import com.github.pwdd.tttcore.{Board, EvalGame, Validation}
+import com.github.pwdd.tttcore.player.computer.HardComputer
 
 object GameAdapter {
   private val validation = Validation

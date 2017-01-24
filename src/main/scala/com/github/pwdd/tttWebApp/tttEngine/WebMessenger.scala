@@ -1,6 +1,6 @@
 package com.github.pwdd.tttWebApp.tttEngine
 
-import com.github.pwdd.ttt.Board
+import com.github.pwdd.tttcore.Board
 
 object WebMessenger {
   def strBoard(board: List[Symbol]): String = {

@@ -2,7 +2,7 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
-import com.github.pwdd.ttt.Board
+import com.github.pwdd.tttcore.Board
 
 case class PlayResponder(requestBody: String) extends TResponder {
   private val boardSize = 9
