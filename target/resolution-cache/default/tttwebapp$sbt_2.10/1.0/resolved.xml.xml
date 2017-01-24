@@ -4,7 +4,7 @@
 		module="tttwebapp$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170124165348"
+		publication="20170124171536"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
