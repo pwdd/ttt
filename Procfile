@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/tttWebApp -Dhttp.port=$PORT
+web: sbt "run -p " + $PORT
