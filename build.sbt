@@ -4,7 +4,8 @@ version := "1.0"
 
 scalaVersion := "2.12.1"
 
-resolvers += Resolver.mavenLocal
+resolvers +=
+  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases"
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
