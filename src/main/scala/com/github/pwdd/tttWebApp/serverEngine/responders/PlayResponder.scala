@@ -9,12 +9,13 @@ case class PlayResponder(requestBody: String) extends TResponder {
   private val boardRepresentation = Map('_ -> "-", 'x -> "x", 'o -> "o")
   private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
 
-  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches("/play/?$") && isValidRequest
+  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*/play/?$.*") && hasValidaRequest
 
-  def isValidRequest: Boolean = {
+  def hasValidaRequest: Boolean = {
     val board = formData._1
     val spot = formData._2
     board.length == 9 &&
+      !Board.isEmpty(board)
       board.forall(marker => validMarkers.contains(marker)) &&
       spot != -1
   }
@@ -35,12 +36,29 @@ case class PlayResponder(requestBody: String) extends TResponder {
   }
 
   def formData: (List[Symbol], Int) = {
-    val boardString = formMap("board")
-    val spot = formMap("input").toInt
-    (boardStateToGameBoard(boardString), spot)
+    val boardString =  rawFormMap.get("board")
+    val spotString = rawFormMap.get("spot")
+    val board = validateOption(boardString)
+    val tempSpot = validateOption(spotString)
+    val spot = if (isNumericString(tempSpot)) tempSpot.toInt else -1
+    (boardStateToGameBoard(board), spot)
   }
 
-  def formMap: Map[String, String] = {
+  private def validateOption(string: Option[String]) = string match {
+    case Some(value) => value
+    case None => "-1"
+  }
+
+  private def isNumericString(input: String): Boolean = {
+
+    def isNumber: Boolean = input.matches("^\\d*$")
+
+    def isEmptyStr: Boolean = input == ""
+
+    !isEmptyStr && isNumber
+  }
+
+  def rawFormMap: Map[String, String] = {
     val formList = requestBody.replaceAll("&|=", " ").split(" ")
     val keys = formList.filter(word => formList.indexOf(word) % 2 == 0)
     val values = formList.filter(word => formList.indexOf(word) %2 != 0)

@@ -15,11 +15,11 @@ class NewGameResponderSuite extends FunSuite {
     assert(!NewGameResponder.canRespond(root + "/play"))
   }
 
-  test("body: returns the content of public/base.html") {
-    val source = fromFile("public/base.html")
-    val lines = try source.mkString.replaceAll("\\n", "") finally source.close()
-    val body = fromInputStream(NewGameResponder.body(root)).mkString
-
-    assert(lines == body)
-  }
+//  test("body: returns the content of public/base.html") {
+//    val source = fromFile("public/base.html")
+//    val lines = try source.mkString.replaceAll("\\n", "") finally source.close()
+//    val body = fromInputStream(NewGameResponder.body(root)).mkString
+//
+//    assert(lines == body)
+//  }
 }

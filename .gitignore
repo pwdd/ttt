@@ -1,5 +1,8 @@
 /target
 /bin
+/project/**
+!/project/plugins.sbt
+!/project/build.properties
 .cache
 .classpath
 .project

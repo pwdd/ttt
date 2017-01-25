@@ -27,7 +27,7 @@ object WebMessenger {
       for ((e, i) <- board.view.zipWithIndex) {
         form += formOpen
         form += hiddenBoard
-        form += "<input type=\"hidden\" value=\"" + i + "\" name=\"input\">" +
+        form += "<input type=\"hidden\" value=\"" + i + "\" name=\"spot\">" +
           "<input id=\"spot-" + i + "\" type=\"submit\" value=\"" + symbolToValue(e) + "\">"
         form += formClose(i)
       }
