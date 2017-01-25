@@ -1,4 +1,0 @@
-[0m[[0minfo[0m] [0m[32mGameAdapterSuite:[0m[0m
-[0m[[0minfo[0m] [0m[32m- createNextBoard: returns the same board if it is full[0m[0m
-[0m[[0minfo[0m] [0m[32m- createNextBoard: returns a board with only user move[0m[0m
-[0m[[0minfo[0m] [0m[32m- createNextBoard: returns a board with user move and computer move[0m[0m

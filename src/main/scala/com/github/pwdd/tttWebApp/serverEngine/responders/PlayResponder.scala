@@ -10,7 +10,6 @@ case class PlayResponder(requestBody: String) extends TResponder {
   private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
 
   def canRespond(fullURI: String): Boolean = {
-    System.out.println(fullURI)
     fullURI.toLowerCase.matches(".*^/play/?$.*") && hasValidaRequest
   }
 

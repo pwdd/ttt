@@ -1,18 +1,22 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.tttEngine.WebViewSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponderSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.ResponderSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.GameAdapterSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.tttEngine.WebMessengerSuite, org.scalatest.tools.Framework$$anon$1@6ebd441a, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 315 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 16[0m[0m
-[0m[[0minfo[0m] [0m[36mSuites: completed 6, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.ResponderSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.tttEngine.WebViewSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponderSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.tttEngine.WebMessengerSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.PlayJSONResponderSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.GameAdapterSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.github.pwdd.tttWebApp.serverEngine.responders.NewGameJSONResponderSuite, org.scalatest.tools.Framework$$anon$1@1d7615d5, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 694 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 32[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 8, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 32, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.tttEngine.WebViewSuite[0m
+[0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.NewGameJSONResponderSuite[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.tttEngine.WebMessengerSuite[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite[0m
+[0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.PlayJSONResponderSuite[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.GameAdapterSuite[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.ResponderSuite[0m
 [0m[[0mdebug[0m] [0m	com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponderSuite[0m

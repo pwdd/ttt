@@ -1,8 +1,10 @@
 #Successful Tests
-#Wed Jan 25 15:28:09 CST 2017
-com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponderSuite=1485379689380
-com.github.pwdd.tttWebApp.serverEngine.responders.ResponderSuite=1485379689380
-com.github.pwdd.tttWebApp.tttEngine.WebViewSuite=1485379689380
-com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite=1485379689380
-com.github.pwdd.tttWebApp.serverEngine.responders.GameAdapterSuite=1485379689471
-com.github.pwdd.tttWebApp.tttEngine.WebMessengerSuite=1485379689380
+#Wed Jan 25 16:51:43 CST 2017
+com.github.pwdd.tttWebApp.serverEngine.responders.NewGameResponderSuite=1485384703146
+com.github.pwdd.tttWebApp.serverEngine.responders.ResponderSuite=1485384703131
+com.github.pwdd.tttWebApp.serverEngine.responders.NewGameJSONResponderSuite=1485384703401
+com.github.pwdd.tttWebApp.tttEngine.WebViewSuite=1485384703131
+com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite=1485384703162
+com.github.pwdd.tttWebApp.serverEngine.responders.PlayJSONResponderSuite=1485384703451
+com.github.pwdd.tttWebApp.serverEngine.responders.GameAdapterSuite=1485384703335
+com.github.pwdd.tttWebApp.tttEngine.WebMessengerSuite=1485384703131
