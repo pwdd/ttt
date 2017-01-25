@@ -4,7 +4,7 @@
 		module="tttwebapp_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170124165349"
+		publication="20170125110124"
 	>
 		<description>
 		tttWebApp
@@ -38,7 +38,7 @@
 		<dependency org="org.scalactic" name="scalactic_2.12" rev="3.0.1" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.1" conf="test->default(compile)"/>
 		<dependency org="com.github.pwdd" name="tttcore_2.12" rev="0.0.1.1" conf="compile->default(compile)"/>
-		<dependency org="com.github.pwdd.HTTPServer" name="HTTPServer" rev="0.1" conf="compile->default(compile)"/>
+		<dependency org="com.github.pwdd.HTTPServer" name="HTTPServer" rev="0.2" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-json_2.12" rev="2.6.0-M1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

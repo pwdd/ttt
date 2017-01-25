@@ -7,10 +7,10 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20170125091538"/>
+		date="20170125110137"/>
 	<dependencies>
 		<module organisation="org.scalactic" name="scalactic_2.12">
-			<revision name="3.0.1" status="release" pubdate="20161109235016" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="10">
+			<revision name="3.0.1" status="release" pubdate="20161109235016" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="11">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2967" time="0" location="/Users/aina/.ivy2/cache/org.scalactic/scalactic_2.12/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.1/scalactic_2.12-3.0.1.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0"/>
@@ -22,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-json_2.12">
-			<revision name="2.6.0-M1" status="release" pubdate="20161205234656" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="9">
+			<revision name="2.6.0-M1" status="release" pubdate="20161205234656" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="10">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="4292" time="0" location="/Users/aina/.ivy2/cache/com.typesafe.play/play-json_2.12/ivy-2.6.0-M1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.6.0-M1/play-json_2.12-2.6.0-M1.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.6.0-M1" rev-constraint-default="2.6.0-M1" rev-constraint-dynamic="2.6.0-M1" callerrev="1.0"/>
@@ -34,7 +34,7 @@
 			</revision>
 		</module>
 		<module organisation="com.github.pwdd" name="tttcore_2.12">
-			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pwdd/ttt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pwdd/ttt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
 				<license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="2916" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="0.0.1.1" rev-constraint-default="0.0.1.1" rev-constraint-dynamic="0.0.1.1" callerrev="1.0"/>
@@ -46,13 +46,25 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
-			<revision name="2.8.5" status="release" pubdate="20161114114848" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+			<revision name="2.8.5" status="release" pubdate="20161114114848" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="20763" time="0" location="/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="1.0"/>
 				<artifacts>
 					<artifact name="jackson-datatype-jsr310" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="62124" time="0" location="/Users/aina/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/srcs/jackson-datatype-jsr310-2.8.5-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.5/jackson-datatype-jsr310-2.8.5-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.pwdd.HTTPServer" name="HTTPServer">
+			<revision name="0.2" status="release" pubdate="20170125105200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="MIT License" url="https://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3275" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.2.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/HTTPServer/HTTPServer/0.2/HTTPServer-0.2.pom"/>
+				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="0.2" rev-constraint-default="0.2" rev-constraint-dynamic="0.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="HTTPServer" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="10283" time="222" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/srcs/HTTPServer-0.2-sources.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/HTTPServer/HTTPServer/0.2/HTTPServer-0.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -94,7 +106,7 @@
 			</revision>
 		</module>
 		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.8.5" status="release" pubdate="20161114000752" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+			<revision name="2.8.5" status="release" pubdate="20161114000752" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="7423" time="0" location="/Users/aina/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="1.0"/>
@@ -130,7 +142,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.1" status="release" pubdate="20161205050923" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="8">
+			<revision name="2.12.1" status="release" pubdate="20161205050923" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="9">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/Users/aina/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.pom"/>
 				<caller organisation="default" name="tttwebapp$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="1.0" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/"/>

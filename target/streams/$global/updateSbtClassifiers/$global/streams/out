@@ -1,7 +1,6 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
-[debug] no default cache defined: set to /Users/aina/.ivy2/cache
 [debug] :: resolving dependencies :: default#tttwebapp$sbt_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
@@ -3317,9 +3316,9 @@
 [debug] 	[NOT REQUIRED] com.google.inject#guice;3.0!guice.jar
 [debug] 	[NOT REQUIRED] org.sonatype.sisu.inject#cglib;2.2.1-v20090111!cglib.jar
 [debug] 	[NOT REQUIRED] asm#asm;3.1!asm.jar
-[debug] :: resolution report :: resolve 1001ms :: artifacts dl 31ms
+[debug] :: resolution report :: resolve 1186ms :: artifacts dl 34ms
 [debug] 	report for default#tttwebapp$sbt_2.10;1.0 default produced in /Users/aina/8thlight/tttWebApp/target/resolution-cache/reports/default-tttwebapp$sbt_2.10-default.xml
-[debug] 	resolve done (1001ms resolve - 31ms download)
+[debug] 	resolve done (1186ms resolve - 34ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#tttwebapp$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -5301,6 +5300,6 @@
 [debug] 	[NOT REQUIRED] org.apache.maven#maven-repository-metadata;3.2.2!maven-repository-metadata.jar(src)
 [debug] 	[NOT REQUIRED] org.bouncycastle#bcpg-jdk15on;1.51!bcpg-jdk15on.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-actors;2.10.6!scala-actors.jar(src)
-[debug] :: resolution report :: resolve 240ms :: artifacts dl 25ms
+[debug] :: resolution report :: resolve 212ms :: artifacts dl 18ms
 [debug] 	report for default#tttwebapp$sources_2.10;1.0 default produced in /Users/aina/8thlight/tttWebApp/target/resolution-cache/reports/default-tttwebapp$sources_2.10-default.xml
-[debug] 	resolve done (240ms resolve - 25ms download)
+[debug] 	resolve done (212ms resolve - 18ms download)

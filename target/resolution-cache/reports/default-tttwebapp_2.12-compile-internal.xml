@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20170124165349"/>
+		date="20170125110124"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-json_2.12">
 			<revision name="2.6.0-M1" status="release" pubdate="20161205234656" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
@@ -107,24 +107,24 @@
 			</revision>
 		</module>
 		<module organisation="com.github.pwdd.HTTPServer" name="HTTPServer">
-			<revision name="0.1" status="release" pubdate="20170124124707" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maven.apache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+			<revision name="0.2" status="release" pubdate="20170125105200" resolver="Sonatype OSS Snapshots" artresolver="Sonatype OSS Snapshots" homepage="http://maven.apache.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="4">
 				<license name="MIT License" url="https://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="3275" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.pom"/>
-				<caller organisation="default" name="tttwebapp_2.12" conf="compile-internal, compile, provided, optional" rev="0.1" rev-constraint-default="0.1" rev-constraint-dynamic="0.1" callerrev="1.0"/>
+				<metadata-artifact status="successful" details="" size="3911" time="206" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.2.xml" searched="true" original-local-location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/ivy-0.2.xml.original" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/HTTPServer/HTTPServer/0.2/HTTPServer-0.2.pom"/>
+				<caller organisation="default" name="tttwebapp_2.12" conf="compile-internal, compile, provided, optional" rev="0.2" rev-constraint-default="0.2" rev-constraint-dynamic="0.2" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="HTTPServer" type="jar" ext="jar" status="no" details="" size="16130" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/jars/HTTPServer-0.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/pwdd/HTTPServer/HTTPServer/0.1/HTTPServer-0.1.jar"/>
+					<artifact name="HTTPServer" type="jar" ext="jar" status="successful" details="" size="16222" time="204" location="/Users/aina/.ivy2/cache/com.github.pwdd.HTTPServer/HTTPServer/jars/HTTPServer-0.2.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/HTTPServer/HTTPServer/0.2/HTTPServer-0.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.github.pwdd" name="tttcore_2.12">
-			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="Sonatype OSS Snapshots" artresolver="Sonatype OSS Snapshots" homepage="https://github.com/pwdd/ttt" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+			<revision name="0.0.1.1" status="release" pubdate="20170124164644" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/pwdd/ttt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
 				<license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="1756" time="183" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml" searched="true" original-local-location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml.original" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.pom"/>
+				<metadata-artifact status="no" details="" size="2916" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/ivy-0.0.1.1.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.pom"/>
 				<caller organisation="default" name="tttwebapp_2.12" conf="compile-internal, compile, provided, optional" rev="0.0.1.1" rev-constraint-default="0.0.1.1" rev-constraint-dynamic="0.0.1.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="tttcore_2.12" type="jar" ext="jar" status="successful" details="" size="29512" time="216" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/jars/tttcore_2.12-0.0.1.1.jar">
+					<artifact name="tttcore_2.12" type="jar" ext="jar" status="no" details="" size="29512" time="0" location="/Users/aina/.ivy2/cache/com.github.pwdd/tttcore_2.12/jars/tttcore_2.12-0.0.1.1.jar">
 						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/releases/com/github/pwdd/tttcore_2.12/0.0.1.1/tttcore_2.12-0.0.1.1.jar"/>
 					</artifact>
 				</artifacts>
