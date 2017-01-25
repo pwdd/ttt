@@ -9,7 +9,10 @@ case class PlayResponder(requestBody: String) extends TResponder {
   private val boardRepresentation = Map('_ -> "-", 'x -> "x", 'o -> "o")
   private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
 
-  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*/play/?$.*") && hasValidaRequest
+  def canRespond(fullURI: String): Boolean = {
+    System.out.println(fullURI)
+    fullURI.toLowerCase.matches(".*^/play/?$.*") && hasValidaRequest
+  }
 
   def hasValidaRequest: Boolean = {
     val board = formData._1
@@ -32,7 +35,7 @@ case class PlayResponder(requestBody: String) extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream = {
-    HTMLResponseBuilder.createResponse(GameAdapter.play(formData), "public/play.html")
+    HTMLResponseBuilder.createResponse(GameAdapter.play(formData))
   }
 
   def formData: (List[Symbol], Int) = {

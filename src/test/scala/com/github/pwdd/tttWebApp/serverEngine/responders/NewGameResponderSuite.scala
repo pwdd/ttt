@@ -1,25 +1,13 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import java.nio.file.Paths
-import scala.io.Source.{fromFile, fromInputStream}
 import org.scalatest.FunSuite
 
 class NewGameResponderSuite extends FunSuite {
-  private val root = Paths.get(System.getProperty("user.dir"), "public").toString.toLowerCase
-
   test("canRespond: is true for root") {
-    assert(NewGameResponder.canRespond(root))
+    assert(NewGameResponder.canRespond("/"))
   }
 
   test("canRespond: is false for anything else") {
-    assert(!NewGameResponder.canRespond(root + "/play"))
+    assert(!NewGameResponder.canRespond("/play"))
   }
-
-//  test("body: returns the content of public/base.html") {
-//    val source = fromFile("public/base.html")
-//    val lines = try source.mkString.replaceAll("\\n", "") finally source.close()
-//    val body = fromInputStream(NewGameResponder.body(root)).mkString
-//
-//    assert(lines == body)
-//  }
 }

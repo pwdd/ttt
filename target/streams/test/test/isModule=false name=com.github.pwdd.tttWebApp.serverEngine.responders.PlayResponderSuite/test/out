@@ -1,19 +1,7 @@
 [0m[[0minfo[0m] [0m[32mPlayResponderSuite:[0m[0m
 [0m[[0minfo[0m] [0m[32m- canRespond: is true for /play and valid request[0m[0m
 [0m[[0minfo[0m] [0m[32m- canRespond: is false for paths other than /play[0m[0m
-[0m[[0minfo[0m] [0m[31m- canRespond: is false for /play and bad request *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  java.lang.NumberFormatException: For input string: "a"[0m[0m
-[0m[[0minfo[0m] [0m[31m  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at java.lang.Integer.parseInt(Integer.java:580)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at java.lang.Integer.parseInt(Integer.java:615)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.StringLike.toInt(StringLike.scala:307)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.StringLike.toInt$(StringLike.scala:307)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponder.formData(PlayResponder.scala:42)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponder.hasValidaRequest(PlayResponder.scala:15)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponder.canRespond(PlayResponder.scala:12)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at com.github.pwdd.tttWebApp.serverEngine.responders.PlayResponderSuite.$anonfun$new$3(PlayResponderSuite.scala:27)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- canRespond: is false for /play and bad request[0m[0m
 [0m[[0minfo[0m] [0m[32m- hasValidRequest: is true for valid spot and board[0m[0m
 [0m[[0minfo[0m] [0m[32m- hasValidRequest: is false if board or spot is not present[0m[0m
 [0m[[0minfo[0m] [0m[32m- header: has properly formatted header if canRespond is true[0m[0m

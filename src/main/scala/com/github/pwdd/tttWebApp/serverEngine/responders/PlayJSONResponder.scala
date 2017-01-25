@@ -7,7 +7,7 @@ import play.api.libs.json.Json
 case class PlayJSONResponder(requestBody: String) extends TResponder {
   private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
 
-  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches("/move.json/?$") && isValidRequest
+  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*/move.json/?$.*") && isValidRequest
 
   def isValidRequest: Boolean = {
     val board = formData._1
@@ -29,7 +29,7 @@ case class PlayJSONResponder(requestBody: String) extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream = {
-    JSONResponseBuilder.createResponse(GameAdapter.play(formData), "")
+    JSONResponseBuilder.createResponse(GameAdapter.play(formData))
   }
 
   def formData: (List[Symbol], Int) = {

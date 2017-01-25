@@ -1,6 +1,7 @@
 /target
 /bin
 /project/**
+/project/target
 !/project/plugins.sbt
 !/project/build.properties
 .cache
