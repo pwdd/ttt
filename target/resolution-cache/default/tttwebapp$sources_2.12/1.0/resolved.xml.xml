@@ -4,7 +4,7 @@
 		module="tttwebapp$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170124171538"
+		publication="20170125091538"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -1,1 +1,1 @@
-web: sbt "run -p " + $PORT
+web: target/universal/stage/bin/tttwebapp
