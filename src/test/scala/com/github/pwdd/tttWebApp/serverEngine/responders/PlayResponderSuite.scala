@@ -44,14 +44,4 @@ class PlayResponderSuite extends FunSuite {
     assert(header contains "Content-Type: text/html\r\n")
     assert(header contains "\r\n\r\n")
   }
-
-  test("body: should contain a representation of the next state of the board") {
-    val requestBody = "spot=0&board=" +
-      "-,o,x," +
-      "o,o,x," +
-      "x,x,o"
-    val responder = PlayResponder(requestBody)
-    val bodyString = fromInputStream(responder.body("/play")).mkString
-    assert(bodyString contains "x,o,x,o,o,x,x,x,o")
-  }
 }

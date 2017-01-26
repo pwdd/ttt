@@ -7,9 +7,9 @@ import play.api.libs.json.Json
 case class PlayJSONResponder(requestBody: String) extends TResponder {
   private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
 
-  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*^/move.json/?$.*") && hasValidRequest
+  def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*/move.json/?$.*") && isValidRequest
 
-  def hasValidRequest: Boolean = {
+  def isValidRequest: Boolean = {
     val board = formData._1
 
     board.length == 9 &&

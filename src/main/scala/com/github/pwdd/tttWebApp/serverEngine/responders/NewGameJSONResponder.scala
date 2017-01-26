@@ -4,8 +4,7 @@ import java.io.{ByteArrayInputStream, IOException, InputStream}
 
 object NewGameJSONResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
-    println("\n\n" + fullURI + "\n\n")
-    fullURI.toLowerCase.matches("^/new.json/?$")
+    fullURI.toLowerCase.matches("/new.json/?")
   }
 
   def header(fullURI: String, date: String): InputStream = {
