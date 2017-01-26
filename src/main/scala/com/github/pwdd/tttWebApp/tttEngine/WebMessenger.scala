@@ -1,14 +1,26 @@
 package com.github.pwdd.tttWebApp.tttEngine
 
-import com.github.pwdd.tttcore.Board
-
 object WebMessenger {
+  val invalidMove = "\nYour choice is not valid. \n"
+
+  val draw = "The game tied!\n"
+
+  def win(winner: Option[Symbol], position: List[Int]): String = {
+    val indexToUserFriendlyNumbers = position.map(_ + 1)
+    val posToStr = indexToUserFriendlyNumbers.mkString(", ")
+
+    winner match {
+      case Some(marker) => "Player '" + marker.name + "' won on positions " + posToStr + "\n"
+      case _ => ""
+    }
+  }
+
   def strBoard(board: List[Symbol]): String = {
 
     def symbolToValue(symbol: Symbol): String = symbol match {
-      case Board.emptySpot => "-"
-      case Board.firstPlayer => "x"
-      case Board.secondPlayer => "o"
+      case GameSettings.emptySpot => "-"
+      case GameSettings.firstPlayerMarker => "x"
+      case GameSettings.secondPlayerMarker => "o"
     }
 
     def gameBoardToString: String = {

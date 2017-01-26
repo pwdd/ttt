@@ -1,11 +1,12 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
+
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
-import com.github.pwdd.tttcore.Board
+import com.github.pwdd.tttWebApp.tttEngine.GameSettings
 import play.api.libs.json.Json
 
 case class PlayJSONResponder(requestBody: String) extends TResponder {
-  private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
+  private val validMarkers = List(GameSettings.emptySpot, GameSettings.firstPlayerMarker, GameSettings.secondPlayerMarker)
 
   def canRespond(fullURI: String): Boolean = fullURI.toLowerCase.matches(".*/move.json/?$.*") && isValidRequest
 

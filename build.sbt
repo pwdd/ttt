@@ -9,7 +9,7 @@ resolvers +=
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
-libraryDependencies += "com.github.pwdd" %% "tttcore" % "0.0.1.1"
+libraryDependencies += "com.github.pwdd" %% "tttcore" % "0.0.1.2"
 libraryDependencies += "com.github.pwdd.HTTPServer" % "HTTPServer" % "0.2"
 libraryDependencies += "com.typesafe.play" %% "play-json" % "2.6.0-M1"
 

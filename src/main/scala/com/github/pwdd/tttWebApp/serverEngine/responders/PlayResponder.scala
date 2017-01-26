@@ -2,12 +2,12 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
-import com.github.pwdd.tttcore.Board
+import com.github.pwdd.tttWebApp.tttEngine.GameSettings
 
 case class PlayResponder(requestBody: String) extends TResponder {
   private val boardSize = 9
   private val boardRepresentation = Map('_ -> "-", 'x -> "x", 'o -> "o")
-  private val validMarkers = List(Board.emptySpot, Board.firstPlayer, Board.secondPlayer)
+  private val validMarkers = List(GameSettings.emptySpot, GameSettings.firstPlayerMarker, GameSettings.secondPlayerMarker)
 
   def canRespond(fullURI: String): Boolean = {
     fullURI.toLowerCase.matches(".*^/play/?$.*") && hasValidaRequest
@@ -17,7 +17,7 @@ case class PlayResponder(requestBody: String) extends TResponder {
     val board = formData._1
     val spot = formData._2
     board.length == 9 &&
-      !Board.isEmpty(board)
+      !GameSettings.board.isEmpty(board)
       board.forall(marker => validMarkers.contains(marker)) &&
       spot != -1
   }
@@ -74,7 +74,7 @@ case class PlayResponder(requestBody: String) extends TResponder {
     if (isValidBoardState(convert)) {
       convert
     } else {
-      Board.newBoard(boardSize)
+      GameSettings.board.newBoard(boardSize)
     }
   }
 
