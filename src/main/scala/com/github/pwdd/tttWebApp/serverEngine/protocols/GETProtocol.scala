@@ -12,11 +12,13 @@ case class GETProtocol(rootDir: String,
 
   def errorMessage(date: String): InputStream = {
     val CRLF = protocolSettings.CRLF
+    val message = protocolSettings.statusCodes.get("404")
 
     new ByteArrayInputStream(
-      (protocolSettings.version + " " + protocolSettings.statusCodes.get("404") + CRLF +
+      (protocolSettings.version + " " + message + CRLF +
         "Date: " + date + CRLF +
         "Content-Type: text/html" + CRLF +
-        CRLF).getBytes)
+        CRLF +
+        message).getBytes)
   }
 }
