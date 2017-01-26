@@ -1,20 +1,19 @@
-/target
-/project/**
-/project/target
-!/project/plugins.sbt
-!/project/build.properties
-.cache
-.classpath
-.project
-.settings
-
-# Intellij
-.idea/
+target
+*.class
+*.log
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
 *.iml
+*.ipr
 *.iws
-
-# Mac
+.idea
+out
 .DS_Store
-
-# Maven
 log
