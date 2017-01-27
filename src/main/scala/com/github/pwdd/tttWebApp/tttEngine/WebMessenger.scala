@@ -18,7 +18,7 @@ object WebMessenger {
   def strBoard(board: List[Symbol]): String = {
 
     def symbolToValue(symbol: Symbol): String = symbol match {
-      case GameSettings.emptySpot => "-"
+      case GameSettings.emptySpot => "_"
       case GameSettings.firstPlayerMarker => "x"
       case GameSettings.secondPlayerMarker => "o"
     }

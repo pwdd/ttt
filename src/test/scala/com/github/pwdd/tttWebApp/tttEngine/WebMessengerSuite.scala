@@ -19,6 +19,6 @@ class WebMessengerSuite extends FunSuite {
   }
 
   test("strBoard: has a field that holds board representation") {
-    assert(forms contains "x,-,x,o,-,o,x,o,x")
+    assert(forms contains "x,_,x,o,_,o,x,o,x")
   }
 }

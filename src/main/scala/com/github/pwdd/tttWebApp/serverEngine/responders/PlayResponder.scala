@@ -6,7 +6,7 @@ import com.github.pwdd.tttWebApp.tttEngine.GameSettings
 
 case class PlayResponder(requestBody: String) extends TResponder {
   private val boardSize = 9
-  private val boardRepresentation = Map('_ -> "-", 'x -> "x", 'o -> "o")
+  private val boardRepresentation = Map('_ -> "_", 'x -> "x", 'o -> "o")
   private val validMarkers = List(GameSettings.emptySpot, GameSettings.firstPlayerMarker, GameSettings.secondPlayerMarker)
 
   def canRespond(fullURI: String): Boolean = {
