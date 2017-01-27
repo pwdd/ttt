@@ -26,13 +26,13 @@ class PlayResponderSuite extends FunSuite {
   test("hasValidRequest: is true for valid spot and board") {
     val requestBody = "spot=0&board=-,-,-,-,-,-,-,-,-"
     val responder = PlayResponder(requestBody)
-    assert(responder.hasValidaRequest)
+    assert(responder.hasValidRequest)
   }
 
   test("hasValidRequest: is false if board or spot is not present") {
     val requestBody = "move=0&board=-,-,-,-,-,-,-,-,-"
     val responder = PlayResponder(requestBody)
-    assert(!responder.hasValidaRequest)
+    assert(!responder.hasValidRequest)
   }
 
   test("header: has properly formatted header if canRespond is true") {

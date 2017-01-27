@@ -24,6 +24,18 @@
     request.send(null);
   };
 
+  ajax.sendPOSTRequest = function(requestUrl, responseHandler, data) {
+    var request = getRequestObject();
+
+    request.onreadystatechange = function() {
+      handleResponse(request, responseHandler);
+    };
+
+    request.open("POST", requestUrl, true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(data);
+  };
+
   function handleResponse(request, responseHandler) {
     if ((request.readyState == READY) && (request.status == OK)) {
       responseHandler(JSON.parse(request.responseText));

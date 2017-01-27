@@ -10,10 +10,10 @@ case class PlayResponder(requestBody: String) extends TResponder {
   private val validMarkers = List(GameSettings.emptySpot, GameSettings.firstPlayerMarker, GameSettings.secondPlayerMarker)
 
   def canRespond(fullURI: String): Boolean = {
-    fullURI.toLowerCase.matches(".*^/play/?$.*") && hasValidaRequest
+    fullURI.toLowerCase.matches(".*^/play/?$.*") && hasValidRequest
   }
 
-  def hasValidaRequest: Boolean = {
+  def hasValidRequest: Boolean = {
     val board = formData._1
     val spot = formData._2
     board.length == 9 &&
