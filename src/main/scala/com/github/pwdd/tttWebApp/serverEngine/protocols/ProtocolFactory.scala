@@ -10,7 +10,7 @@ object ProtocolFactory extends TProtocolFactory {
     if (request.get("Method").toUpperCase == "GET") {
       GETProtocol(rootDirectory,
         request,
-        Array(NewGameResponder, NewGameJSONResponder))
+        Array(NewGameResponder, NewGameJSONResponder, FileResponder))
     }
 
     else {

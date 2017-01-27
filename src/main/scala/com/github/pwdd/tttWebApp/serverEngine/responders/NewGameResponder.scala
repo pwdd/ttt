@@ -1,9 +1,14 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import java.io.{InputStream, ByteArrayInputStream, IOException}
+import java.io.{ByteArrayInputStream, IOException, InputStream}
+import java.nio.file.Paths
 
 case object NewGameResponder extends TResponder {
-  def canRespond(fullURI: String): Boolean = fullURI == "/"
+  def canRespond(fullURI: String): Boolean = {
+    val path = Paths.get(System.getProperty("user.dir"), "/public").toString.toLowerCase
+    val requested = fullURI.toLowerCase
+    requested == path || requested == path + "/"
+  }
 
   def header(fullURI: String, date: String): InputStream = {
     val CRLF = protocolSettings.CRLF
