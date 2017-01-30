@@ -24,7 +24,6 @@ object WebMessenger {
 
     val formOpen = "<form method=\"post\" action=\"/play\" style=\"display: inline\">"
     val hiddenBoard = "<input type=\"hidden\" name=\"board\" value=\"" + gameBoardToString + "\">"
-    val playItAgain = "<br><a href=\"./\"><button>Restart</button></a>"
 
     def formClose(index: Int): String = if (List(2, 5, 8).contains(index)) "</form><br>" else "</form>"
 
@@ -39,6 +38,6 @@ object WebMessenger {
       }
       form
     }
-    createForms + playItAgain
+    createForms
   }
 }

@@ -10,8 +10,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     $ajax.sendPOSTRequest("/move.json", htmlBoard, data);
   });
 
+  document.getElementById("restart").addEventListener("click", function (event) {
+    event.preventDefault();
+    $ajax.sendGETRequest("/new.json", htmlBoard);
+  })
+
   function htmlBoard(json) {
-    insertHTML("main", json["message"] + boardString(json));
+    insertHTML("main", boardString(json));
+    insertHTML("message", json["message"]);
   }
 
   function insertHTML(selector, html) {

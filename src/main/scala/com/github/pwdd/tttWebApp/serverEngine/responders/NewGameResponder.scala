@@ -24,6 +24,6 @@ case object NewGameResponder extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream =  {
-    HTMLResponseBuilder.createResponse(GameData(GameAdapter.newGame, "<h2></h2>"))
+    HTMLResponseBuilder.createResponse(GameData(GameAdapter.newGame, ""))
   }
 }

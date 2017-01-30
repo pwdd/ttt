@@ -21,6 +21,6 @@ object NewGameJSONResponder extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream = {
-    JSONResponseBuilder.createResponse(GameData(GameAdapter.newGame, "<h2></h2>"))
+    JSONResponseBuilder.createResponse(GameData(GameAdapter.newGame, ""))
   }
 }
