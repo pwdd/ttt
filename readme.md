@@ -46,7 +46,9 @@ HTTP/1.1 200 OK
 - `/move.json` - returns the new state of the game.
 
 ```shell
-$ curl -i -H "Content-Type: application/json" -X POST -d '{"board":["o", "o", "_", "x", "x", "_", "_","_", "_"],"spot":6}' http://ttt-app.herokuapp.com/move.json
+$ curl -i -H "Content-Type: application/json" -X POST \
+-d '{"board":["o", "o", "_", "x", "x", "_", "_","_", "_"],"spot":6}' \
+http://ttt-app.herokuapp.com/move.json
 
 HTTP/1.1 200 OK
 // ...
