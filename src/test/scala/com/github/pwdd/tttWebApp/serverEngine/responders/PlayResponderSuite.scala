@@ -1,7 +1,8 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import scala.io.Source.fromInputStream
+import com.github.pwdd.tttWebApp.tttEngine.{GameData, GameSettings}
 
+import scala.io.Source.fromInputStream
 import org.scalatest.FunSuite
 
 class PlayResponderSuite extends FunSuite {
@@ -43,5 +44,19 @@ class PlayResponderSuite extends FunSuite {
     assert(header contains "date\r\n")
     assert(header contains "Content-Type: text/html\r\n")
     assert(header contains "\r\n\r\n")
+  }
+
+  test("body: has 9 form tags") {
+    val requestBody = "spot=0&board=-,-,-,-,-,-,-,-,-"
+    val responder = PlayResponder(requestBody)
+    val body = fromInputStream(responder.body("/play")).mkString
+    assert("<form".r.findAllMatchIn(body).length == GameSettings.boardLength)
+  }
+
+  test("body: is valid html doc") {
+    val requestBody = "spot=0&board=-,-,-,-,-,-,-,-,-"
+    val responder = PlayResponder(requestBody)
+    val body = fromInputStream(responder.body("/play")).mkString
+    assert(body contains "<!doctype html>")
   }
 }

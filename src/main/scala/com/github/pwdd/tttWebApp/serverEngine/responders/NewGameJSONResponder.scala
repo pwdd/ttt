@@ -6,7 +6,8 @@ import com.github.pwdd.tttWebApp.tttEngine.GameData
 
 object NewGameJSONResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
-    fullURI.toLowerCase.matches("/new.json/?")
+    val re = "^/new.json/?$".r
+    re.findFirstIn(fullURI.toLowerCase).nonEmpty
   }
 
   def header(fullURI: String, date: String): InputStream = {
