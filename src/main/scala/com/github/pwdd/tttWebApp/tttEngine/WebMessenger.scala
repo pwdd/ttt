@@ -5,14 +5,9 @@ object WebMessenger {
 
   val draw = "The game tied!\n"
 
-  def win(winner: Option[Symbol], position: List[Int]): String = {
-    val indexToUserFriendlyNumbers = position.map(_ + 1)
-    val posToStr = indexToUserFriendlyNumbers.mkString(", ")
-
-    winner match {
-      case Some(marker) => "Player '" + marker.name + "' won on positions " + posToStr + "\n"
-      case _ => ""
-    }
+  def win(winner: Option[Symbol], position: List[Int]): String = winner match {
+    case Some(marker) => "Player '" + marker.name + "' won\n"
+    case _ => "<h2></h2>"
   }
 
   def strBoard(board: List[Symbol]): String = {
@@ -24,19 +19,17 @@ object WebMessenger {
     }
 
     def gameBoardToString: String = {
-      board.map(symbolToValue(_)).mkString(",")
+      board.map(symbolToValue).mkString(",")
     }
 
-    val htmlStart = "<!doctype html><html><head><title>TTT</title></head><body>"
     val formOpen = "<form method=\"post\" action=\"/play\" style=\"display: inline\">"
     val hiddenBoard = "<input type=\"hidden\" name=\"board\" value=\"" + gameBoardToString + "\">"
     val playItAgain = "<br><a href=\"./\"><button>Restart</button></a>"
-    val htmlClose = "</body>" + playItAgain + "</html>"
 
     def formClose(index: Int): String = if (List(2, 5, 8).contains(index)) "</form><br>" else "</form>"
 
     def createForms: String = {
-      var form = ""
+      var form: String = ""
       for ((e, i) <- board.view.zipWithIndex) {
         form += formOpen
         form += hiddenBoard
@@ -46,6 +39,6 @@ object WebMessenger {
       }
       form
     }
-    htmlStart + createForms + htmlClose
+    createForms + playItAgain
   }
 }

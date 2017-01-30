@@ -3,6 +3,8 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 import java.nio.file.Paths
 
+import com.github.pwdd.tttWebApp.tttEngine.GameData
+
 case object NewGameResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
     val path = Paths.get(System.getProperty("user.dir"), "/public").toString.toLowerCase
@@ -22,6 +24,6 @@ case object NewGameResponder extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream =  {
-    HTMLResponseBuilder.createResponse(GameAdapter.newGame)
+    HTMLResponseBuilder.createResponse(GameData(GameAdapter.newGame, "<h2></h2>"))
   }
 }

@@ -1,11 +1,15 @@
 package com.github.pwdd.tttWebApp.serverEngine.responders
 
-import java.io.{ByteArrayInputStream, FileInputStream, InputStream}
+import java.io.{ByteArrayInputStream, InputStream}
 
-import com.github.pwdd.tttWebApp.tttEngine.{WebMessenger, WebView}
+import com.github.pwdd.tttWebApp.tttEngine.{GameData, WebMessenger}
 
 object HTMLResponseBuilder extends ResponseBuilder {
-  def createResponse(board: List[Symbol]): InputStream = {
-    new ByteArrayInputStream(WebMessenger.strBoard(board).getBytes)
+  def createResponse(gameData: GameData): InputStream = {
+    new ByteArrayInputStream(
+      (htmlStart +
+        gameData.message +
+        WebMessenger.strBoard(gameData.board) +
+        htmlEnd).getBytes)
   }
 }

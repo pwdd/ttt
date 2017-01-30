@@ -2,6 +2,8 @@ package com.github.pwdd.tttWebApp.serverEngine.responders
 
 import java.io.{ByteArrayInputStream, IOException, InputStream}
 
+import com.github.pwdd.tttWebApp.tttEngine.GameData
+
 object NewGameJSONResponder extends TResponder {
   def canRespond(fullURI: String): Boolean = {
     fullURI.toLowerCase.matches("/new.json/?")
@@ -19,6 +21,6 @@ object NewGameJSONResponder extends TResponder {
 
   @throws[IOException]
   def body(fullURI: String): InputStream = {
-    JSONResponseBuilder.createResponse(GameAdapter.newGame)
+    JSONResponseBuilder.createResponse(GameData(GameAdapter.newGame, "<h2></h2>"))
   }
 }

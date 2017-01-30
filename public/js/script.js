@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   function htmlBoard(json) {
-    insertHTML("main", boardString(json));
+    insertHTML("main", json["message"] + boardString(json));
   }
 
   function insertHTML(selector, html) {
