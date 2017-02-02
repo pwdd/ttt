@@ -1,0 +1,9 @@
+language: scala
+scala: "-2.12.1"
+deploy:
+  provider: heroku
+  api_key:
+    secure: aRYG9xJgt5WDpeR6dX7FkRK8KXEjDPDSNYdryZCg8N8kpQVxoYddE8La2LZ97tUU165iZAlPLiS8tohNjYHB4dTV0M8ezh3uTc6FyDN29a5dcLgjkoZHrj3clBEgFzRJuuPjGJYfmYTmFLPIodEdrRO/USsURpZrUeoDwoQt4GU+osAp9kedktMeGjtg1i67CGVG9jpk+bUlRbCUs/bKbFWH6sV98eB8EByc+e31zsYuWvmYw73Ti6zFw14iDgPcTAJBfur7RNeRw4ftWQfMSrv/xI+E+pBth0hm7IUu+s4LFcxIJZwqxP2vcAOsN1/UjBcxO9JEBwbbDLBqIrOMTipgXJHY3T2mSWQpH2b6V9eiOYRofqZmEXXqDay9Sm7cApKdbNChJX7fiWrinoY11PCuZzg4d2W2t1r4oI5hEHTi7e9nXl6RFAjoVq78JNVgxUPTGL3tWlR79D4ol4DwQEUYS1qnA3AfEcBiKNjgph7kJR6SKko6Drc+TyV/gpmXMXf8gLC2Bn0jeg+6Oo3LWgHdyEdYJDAKi223/e5o+CGqrK5PFjY8zf4djC1lKvv27imuSLduvi6n+47GA4mpKOJoqCHKnYUOWMnMRXlgfbsWcOmv98HVt7ZXAskhqBMxRM/WRSxGgWYBEVeh7vCsAZGrMU605zV9ZxoyEAU5Gng=
+  app: ttt-app
+  on:
+    repo: pwdd/ttt
