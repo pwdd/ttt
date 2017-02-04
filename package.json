@@ -1,0 +1,27 @@
+{
+  "name": "tttwebapp",
+  "version": "0.0.1",
+  "description": "ttt",
+  "main": "public/js/src/script.js",
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": ["**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwdd/ttt.git"
+  },
+  "keywords": [
+    "ttt"
+  ],
+  "author": "pwdd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwdd/ttt/issues"
+  },
+  "homepage": "https://github.com/pwdd/ttt#readme"
+}
