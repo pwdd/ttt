@@ -4,10 +4,13 @@
   "description": "ttt",
   "jest": {
     "verbose": true,
-    "collectCoverageFrom": ["**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"]
   },
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
     "build": "webpack"
   },
   "repository": {
