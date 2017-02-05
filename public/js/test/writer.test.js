@@ -1,11 +1,14 @@
 const writer = require('../src/writer');
 
-describe("boardString", () => {
-  var json = {
-    "board": ["_","_", "_", "_", "_", "_", "_", "_", "_"],
-    "spot": 0
-  };
+document.body.innerHTML = '<div id="main"></div><div id="message"></div>';
 
+var json = {
+  "board": ["_","_", "_", "_", "_", "_", "_", "_", "_"],
+  "spot": 0,
+  "message": "some message"
+};
+
+describe("boardString", () => {
   var form = writer.boardString(json);
 
   var boardLength = json["board"].length;
@@ -42,9 +45,24 @@ describe("boardString", () => {
 
 
 describe("insertHTML", () => {
-  document.body.innerHTML = "<div id=\"foo\"></div>";
+
   test("changes innerHTML of a given selector", () => {
-    writer.insertHTML("foo", "inner content");
-    expect(document.getElementById("foo").innerHTML).toEqual("inner content");
+    writer.insertHTML("main", "inner content");
+    expect(document.getElementById("main").innerHTML).toEqual("inner content");
   });
+})
+
+describe("htmlGame", () => {
+
+  test("inserts forms inside #main", () => {
+    writer.htmlGame(json);
+    var innerMain = document.getElementById("main").innerHTML;
+    expect(innerMain).toContain("</form>");
+  });
+
+  test("inserts message inside #message", () => {
+    writer.htmlGame(json);
+    var innerMessage = document.getElementById("message").innerHTML;
+    expect(innerMessage).toContain("some message");
+  })
 })
