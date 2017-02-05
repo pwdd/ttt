@@ -70,6 +70,52 @@
 /* 0 */
 /***/ (function(module, exports) {
 
+var insertHTML = function(selector, html) {
+  var target = document.getElementById(selector);
+  target.innerHTML = html
+};
+
+var boardString = function(jsonData) {
+  var board = jsonData["board"];
+  var formOpen = "<form method=\"post\" action=\"\" style=\"display: inline\">";
+  var hiddenBoard = "<input type=\"hidden\" name=\"board\" value=\"" + board.toString() + "\">";
+  var indexBreaks = [2, 5, 8]
+  var finalForm = "";
+
+  var formClose = function(index) {
+    if (indexBreaks.indexOf(index) !== -1) {
+      return "</form><br>";
+    } else {
+      return "</form>";
+    }
+  }
+
+  for (var i = 0; i < board.length; i++) {
+    finalForm += formOpen;
+    finalForm += hiddenBoard;
+    finalForm += "<input type=\"hidden\" value=\"" + i + "\" name=\"spot\">";
+    finalForm += "<input id=\"spot-" + i + "\" type=\"submit\" value=\"" + board[i] + "\">";
+    finalForm += formClose(i);
+  }
+  return finalForm;
+};
+
+var htmlGame = function(json) {
+  insertHTML("main", boardString(json));
+  insertHTML("message", json["message"]);
+};
+
+module.exports = {
+  htmlGame: htmlGame,
+  insertHTML: insertHTML,
+  boardString: boardString
+}
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
 var ajax = (function (global) {
   var ajax = {}
 
@@ -122,78 +168,30 @@ module.exports = ajax;
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-var writer = (function (global) {
-
-  var writer = {}
-
-  writer.htmlGame = function(json) {
-    writer.insertHTML("main", writer.boardString(json));
-    writer.insertHTML("message", json["message"]);
-  };
-
-  writer.insertHTML = function(selector, html) {
-    var target = document.getElementById(selector);
-    target.innerHTML = html
-  };
-
-  writer.boardString = function(jsonData) {
-    var board = jsonData["board"];
-    var formOpen = "<form method=\"post\" action=\"\" style=\"display: inline\">";
-    var hiddenBoard = "<input type=\"hidden\" name=\"board\" value=\"" + board.toString() + "\">";
-    var indexBreaks = [2, 5, 8]
-    var finalForm = "";
-
-    var formClose = function(index) {
-      if (indexBreaks.indexOf(index) !== -1) {
-        return "</form><br>";
-      } else {
-        return "</form>";
-      }
-    }
-
-    for (var i = 0; i < board.length; i++) {
-      finalForm += formOpen;
-      finalForm += hiddenBoard;
-      finalForm += "<input type=\"hidden\" value=\"" + i + "\" name=\"spot\">";
-      finalForm += "<input id=\"spot-" + i + "\" type=\"submit\" value=\"" + board[i] + "\">";
-      finalForm += formClose(i);
-    }
-    return finalForm;
-  };
-
-  global.$writer = writer;
-
-})(window);
-
-module.exports = writer;
-
-
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
 __webpack_require__(1);
+var writer = __webpack_require__(0);
+
+console.log(__webpack_require__(0));
+console.log(__webpack_require__(0).htmlGame);
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-  $ajax.sendGETRequest("/new.json", $writer.htmlGame);
+  $ajax.sendGETRequest("/new.json", writer.htmlGame);
 
   window.addEventListener("submit", function (event) {
     event.preventDefault();
     var board = JSON.stringify(event.target.board.value.split(","));
     var spot = event.target.spot.value;
     var data = '{"board":' + board + ',"spot":' + spot + "}";
-    $ajax.sendPOSTRequest("/move.json", $writer.htmlGame, data);
+    $ajax.sendPOSTRequest("/move.json", writer.htmlGame, data);
   });
 
   document.getElementById("restart").addEventListener("click", function (event) {
     event.preventDefault();
-    $ajax.sendGETRequest("/new.json", $writer.htmlGame);
+    $ajax.sendGETRequest("/new.json", writer.htmlGame);
   })
 });
 
