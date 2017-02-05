@@ -1,5 +1,7 @@
 # Tic Tac Toe
 
+[![Build Status](https://travis-ci.org/pwdd/ttt.svg?branch=master)](https://travis-ci.org/pwdd/ttt)
+
 ## About
 
 User goes first; unbeatable computer plays second
