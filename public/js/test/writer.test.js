@@ -40,3 +40,11 @@ describe("boardString", () => {
   })
 })
 
+
+describe("insertHTML", () => {
+  document.body.innerHTML = "<div id=\"foo\"></div>";
+  test("changes innerHTML of a given selector", () => {
+    writer.insertHTML("foo", "inner content");
+    expect(document.getElementById("foo").innerHTML).toEqual("inner content");
+  });
+})

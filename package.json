@@ -2,13 +2,12 @@
   "name": "tttwebapp",
   "version": "0.0.1",
   "description": "ttt",
-  "main": "public/js/src/script.js",
   "jest": {
     "verbose": true,
     "collectCoverageFrom": ["**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --watch",
     "build": "webpack"
   },
   "repository": {
