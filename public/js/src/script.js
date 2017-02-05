@@ -1,8 +1,5 @@
-require('./ajax.js');
+var $ajax = require('./ajax.js');
 var writer = require('./writer.js');
-
-console.log(require('./writer.js'));
-console.log(require('./writer.js').htmlGame);
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
