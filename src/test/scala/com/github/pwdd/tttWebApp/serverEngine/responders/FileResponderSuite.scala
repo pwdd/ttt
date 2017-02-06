@@ -19,7 +19,7 @@ class FileResponderSuite extends FunSuite {
   }
 
   test("canRespond: is true for any file that exists inside /public") {
-    assert(FileResponder.canRespond(root + "/js/ajax.js"))
+    assert(FileResponder.canRespond(root + "/js/src/ajax.js"))
   }
 
   test("canRespond: is false for non existing files") {
@@ -44,12 +44,12 @@ class FileResponderSuite extends FunSuite {
 
   test("body: responds with the content of index.html if request is to /js") {
     val body = fromInputStream(FileResponder.body(root + "/js")).mkString
-    assert(body contains "<script src=\"js/ajax.js\"></script>")
+    assert(body contains "TTT-JS")
   }
 
   test("body: responds with the content of requested file") {
-    val body = fromInputStream(FileResponder.body(root + "/js/ajax.js")).mkString
-    val file = new FileInputStream(root + "/js/ajax.js")
+    val body = fromInputStream(FileResponder.body(root + "/js/src/ajax.js")).mkString
+    val file = new FileInputStream(root + "/js/src/ajax.js")
     val fileContent = fromInputStream(file).mkString
     assert(fileContent === body)
   }

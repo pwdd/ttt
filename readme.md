@@ -16,7 +16,7 @@ User goes first; unbeatable computer plays second
 - SBT 0.13.13
 
 ## Tests
-sbt 
+
 Running the tests: `sbt test`
 
 ## Play
