@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     event.preventDefault();
     var board = JSON.stringify(event.target.board.value.split(","));
     var spot = event.target.spot.value;
-    var data = '{"board":' + board + ',"spot":' + spot + "}";
+    var data = JSON.stringify({"board": + board,"spot":spot});
     $ajax.sendPOSTRequest("/move.json", writer.htmlGame, data);
   });
 
