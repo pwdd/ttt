@@ -1,4 +1,4 @@
-const $ajax = require('../src/ajax');
+var $ajax = require('../src/ajax');
 
 let open, send, setRequestHeader;
 
@@ -8,7 +8,7 @@ function createXHRMock() {
   send = jest.fn();
   setRequestHeader = jest.fn();
 
-  const xhrMockClass = function () {
+  var xhrMockClass = function () {
     return {
       open,
       send,

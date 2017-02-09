@@ -1,4 +1,4 @@
-const writer = require('../src/writer');
+var writer = require('../src/writer');
 
 document.body.innerHTML = '<div id="main"></div><div id="message"></div>';
 

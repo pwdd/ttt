@@ -1,6 +1,6 @@
 jest.mock('../src/ajax.js');
 
-const scripts = require('../src/script.js');
+var scripts = require('../src/script.js');
 
 describe('sendPOSTRequest', () => {
   test("sends an ajax request on form submit", () => {
