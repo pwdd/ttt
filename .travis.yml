@@ -2,7 +2,11 @@ language: scala
 scala: "2.12.1"
 jdk:
   - oraclejdk8
-script: sbt test && jest
+before_script:
+  - npm install jest
+script:
+  - sbt test
+  - npm test
 deploy:
   provider: heroku
   api_key:
